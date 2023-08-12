@@ -67,10 +67,10 @@ def create_zip_chunks(directory, output_folder):
 if __name__ == "__main__":
 
     # Root directory containing files to be zipped
-    directory = r'E:\RootDirectory'
+    directory = r'RootDirectoryAddess'
     
     # Destination directory for saving the zip files
-    output_folder = r'E:\DestinationDirectory'
+    output_folder = r'DestinationDirectoryAddess'
 
     # Start the process to create zip chunks
     create_zip_chunks(directory, output_folder)
