@@ -60,10 +60,10 @@ def create_zip_chunks(directory, output_folder, max_size=1.8*1024*1024*1024):
 
 if __name__ == '__main__':
     # Root directory containing files to be zipped
-    directory = r'E:\PICS'
+    directory = r'E:\RootDirectory'
     
     # Destination directory for saving the zip files
-    output_folder = r'E:\justZIPs'
+    output_folder = r'E:\DestinationDirectory'
     
     # Create the output directory if it doesn't exist
     if not os.path.exists(output_folder):
