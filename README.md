@@ -39,7 +39,7 @@ def get_all_file_paths(directory):
 ```python
 def create_zip_chunks(directory, output_folder):
     ...
-`
+```
 
 4. **Main Execution**: The script's entry point. This segment defines the source directory and the destination for the zip archives, and then calls the main functions.
 
