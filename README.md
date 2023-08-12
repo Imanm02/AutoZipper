@@ -8,6 +8,10 @@ AutoZipper is a Python script designed to automate the task of compressing files
 - **Full Directory Compression**: Capable of traversing through a directory and zipping all files, maintaining the original folder structure.
 - **Optimized for Large File Collections**: Built to handle directories with a large number of files without compromising on efficiency or speed.
 - **Customizable Size Limit**: Users can easily modify the maximum allowed size for each zip archive.
+- **Progress Bar**: Using the `tqdm` library, the script provides a real-time progress bar in the console, allowing users to track the zipping process visually.
+- **Robust Error Handling**: The script incorporates robust error handling, including checking for:
+  - Existence of the source directory
+  - Adequate free disk space in the output directory
 
 ## Code Walkthrough
 
@@ -27,12 +31,15 @@ def get_all_file_paths(directory):
     ...
 ```
 
-3. **Creating Zip Chunks**: The `create_zip_chunks()` function processes files, compressing them into zip archives. If adding another file would exceed the size limit, a new zip archive is started.
+3. **Creating ZIP Chunks**: Main function to create the zip chunks. This function incorporates:
+  - Checking for source directory existence
+  - Verifying enough free disk space
+  - Zipping files while ensuring each archive remains below the size limit
 
 ```python
-def create_zip_chunks(directory, output_folder, max_size=1.8*1024*1024*1024):
+def create_zip_chunks(directory, output_folder):
     ...
-```
+`
 
 4. **Main Execution**: The script's entry point. This segment defines the source directory and the destination for the zip archives, and then calls the main functions.
 
@@ -44,7 +51,7 @@ if __name__ == '__main__':
 
 ## Usage
 
-1. **Set Up**: Ensure your Python environment includes the `os` and `zipfile` libraries. These are standard in Python, so no additional installation is typically required.
+1. **Set Up**: Ensure your Python environment includes the `os`, `zipfile` and `tqdm` libraries. These are standard in Python, so no additional installation is typically required.
 
 2. **Modify Source & Destination**: Within the main execution section of the script (`if __name__ == '__main__':`), set the `directory` variable to point to the source directory of your files, and `output_folder` to your desired zip archive destination.
 
