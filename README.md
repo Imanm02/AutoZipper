@@ -19,10 +19,10 @@ Here's a brief overview of how the script operates:
 
 1. **Importing Libraries**: Essential libraries are imported to handle file paths, zipping operations, and directory traversal.
 
-\```python
+```python
 import os
 import zipfile
-\```
+```
 
 2. **Fetching All File Paths**: The `get_all_file_paths()` function recursively collects all file paths within the specified directory.
 
